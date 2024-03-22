@@ -1,0 +1,41 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-article-table
+      author: Maria Zhdanova
+      changes:
+        - createTable:
+            tableName: article
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: title
+                  type: varchar(100)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: author
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: content
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: publishing_date
+                  type: datetime(6)
+                  constraints:
+                    nullable: false
+              - addForeignKeyConstraint:
+                  baseTableName: article
+                  baseColumnNames: user_id
+                  referencedTableName: users
+                  referencedColumnNames: id
+                  constraintName: fk_article_user
