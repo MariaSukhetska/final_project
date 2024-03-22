@@ -61,7 +61,7 @@
         <br> 1. Installed JDK and IntelliJ IDEA;
         <br> 2. MySql/PostgresSql or another preferable relational database;
         <br> 3. Maven (for building the project);
-        <br> 4. Clone the repository: git clone https://github.com/MariaSukhetska
+        <br> 4. Clone the repository: git clone https://github.com/MariaSukhetska/final_project
         <br> 5. Navigate to the project directory: cd final_project
         <br> 6. Build the project: mvn clean install
         <br> 7. Run the application: mvn spring-boot:run
